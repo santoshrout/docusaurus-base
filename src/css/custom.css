@@ -1,0 +1,185 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+/*(R:252, G:143, B:82)*/
+
+:root {
+  --ifm-color-primary: #FC8F52;  
+  --ifm-color-primary-dark: rgb(237, 130, 74);
+  --ifm-color-primary-darker: rgb(214, 117, 67);
+  --ifm-color-primary-darkest: rgb(193, 106, 60);
+  --ifm-color-primary-light: rgb(253, 157, 90);
+  --ifm-color-primary-lighter: rgb(254, 172, 99);
+  --ifm-color-primary-lightest: rgb(255, 189, 109);
+  --ifm-code-font-size: 95%;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0,0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+h1{
+  color: #FC8F52;
+  font-weight: normal;
+  font-size: 2rem !important;
+}
+
+.faq{
+  color: var(--ifm-font-color-base);
+}
+
+.heading-text{
+  padding-bottom: 1rem;
+}
+
+.padding{
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.card_home, .service_card{
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+}
+
+.home-next{
+  text-align: center;
+}
+.service_p{
+  margin-top: 1em;
+  width: 8.2rem;
+}
+.solution_section{
+  width: 8.5rem;
+  height: 8.5rem;
+}
+
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+article {
+  max-width: 966px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 2.5rem !important;
+  font-family: 'Acme';
+  font-weight: normal;
+}
+
+.orange-text {
+  color: #FC8F52;
+}
+
+.services{
+  padding-top: 12rem;
+}
+
+.service_card{
+  padding-left: 1rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@media screen and (max-width: 996px) {
+  :root {
+    --ifm-font-size-base: 12px;
+  }
+
+  article header h1 {
+    font-size: 2rem;
+    font-family: 'Roboto';
+  }
+  .hero .hero__title {
+    font-size: 3rem;
+    font-family: 'Acme';
+  }
+
+}
+
+@media screen and (min-width: 997px) {
+  :root {
+    --ifm-font-size-base: 18px;
+  } 
+
+  article header h1 {
+    font-size: 2rem;
+    font-family: 'Roboto';
+  }
+
+  .hero .hero__title {
+    font-size: 4rem;
+    font-family: 'Acme';
+  }
+  
+}
+
+@media screen and (max-width: 1162px) {
+  .service_card{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+  }
+  .service_p{
+  width: 150px;
+  }
+}
+
+@media (max-width: 1236px){
+  .service_card{
+    padding-left: 0rem;
+  }
+}
+
+@media (max-width: 998px){
+  .services{
+    padding-top: 25rem;
+  }
+}
+
+@media (max-width: 776px){
+  .services{
+    padding-top: 20rem;
+  }
+}
+
+@media (max-width: 598px){
+  .services{
+    padding-top: 10rem;
+  }
+}
+@media (max-width: 411px){
+  .services{
+    padding-top: 3rem;
+  }
+}
+
+@media (max-width: 996px) and (min-width: 676px){
+  .service_card_first{
+    padding-left: 6rem;
+  }
+}

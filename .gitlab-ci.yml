@@ -1,0 +1,31 @@
+variables:
+  AWS_DEFAULT_REGION: 'ap-southeast-1'
+  S3_BUCKET_NAME: 'saaragh.com'
+  LOCAL_PATH: $(pwd)
+
+# This is the stages / task to perfom in jobs
+stages:
+  - build
+  - deploy
+
+build:
+  image: node:latest
+  stage: build
+  script: 
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - build/
+
+deploy:
+  image: python:latest
+  stage: deploy
+  only:
+    - master
+  script:
+    - pip install awscli
+    - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+    - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+    - aws configure list
+    - aws s3 sync ./build s3://$S3_BUCKET_NAME --acl bucket-owner-full-control
